@@ -42,9 +42,6 @@ class TextFormatter {
     }
 
     public void process(char aChar) {
-        if (isCharOutOfAcceptableRange(aChar))
-            return;
-        
         if (isCharIncreasingIndent(aChar)) {
             increaseIndent(aChar);
             return;
@@ -97,11 +94,11 @@ class TextFormatter {
         
         printContentionChar(openerChar);
 
-        openersStack.push(openerChar);
+        pushOpenerCharacterToStack(openerChar);
     }
 
     private void decreaseIndent(char closerChar) {
-        char openerChar = openersStack.pop();
+        char openerChar = popOpenerCharacterFromStack();
         
         verifyContentionParity(openerChar, closerChar);
 
@@ -114,7 +111,21 @@ class TextFormatter {
         indentLevel--;
     }
 
+    private void pushOpenerCharacterToStack(char openerChar) {
+        openersStack.push(openerChar);
+    }
+
+    private char popOpenerCharacterFromStack() {
+        if (openersStack.isEmpty())
+            throw new IllegalStateException("Unmatched contentention character");
+        
+        return openersStack.pop();
+    }
+
     private void insertCharIntoCurrentLine(char aChar) {
+        if (isCharOutOfAcceptableRange(aChar))
+            aChar = ' ';
+        
         currentLineBuffer.append((char)aChar);
     }
 

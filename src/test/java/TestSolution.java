@@ -45,4 +45,15 @@ public class TestSolution {
     		// empty block
     	}
     }
+
+    @Test (expected = IllegalStateException.class)
+    public void testCase4() throws Exception {
+    	try (InputStream is = TestSolution.class.getResourceAsStream("test4")) {    	
+	    	Solution.setInputStream(is);
+	    	
+	    	Solution.main(null);
+    	} finally {
+    		// empty block
+    	}
+    }
 }
