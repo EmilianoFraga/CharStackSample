@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.learning</groupId>
     <artifactId>charstack</artifactId>
-    <version>0.0.1</version> <!-- project version -->
+    <version>0.1</version> <!-- project version -->
     <name>Learning Char Stack</name>
     <packaging>jar</packaging>
     <properties>
