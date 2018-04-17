@@ -1,6 +1,6 @@
 This line has contention characters. ( Contention starts here.
 
-Continues here, at this line.
+Continues here, at this line.	< TAB was here.
 
 Then, for some reason, ends here. )
 
