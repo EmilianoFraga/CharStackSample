@@ -16,3 +16,20 @@ Then:
 `
 mvn clean test
 `
+
+To create an executable jar:
+
+`
+mvn clean package
+`
+
+Then to execute at command line:
+
+```
+$ echo "This is a sample text. ( Contained text. ) Out of contention." | java -jar target/charstack-0.0.1.jar
+This is a sample text.
+  (
+  Contained text.
+  )
+Out of contention.
+```
