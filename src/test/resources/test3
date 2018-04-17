@@ -1,0 +1,7 @@
+This file has an unmatched contention. ( Contention starts here.
+
+Continues here, at this line. { New contention. [ Another one. ] That one was closed. Now this one }
+
+The first contention ends here. )
+
+This line has unmatched contention: ( ]
