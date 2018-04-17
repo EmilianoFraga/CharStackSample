@@ -13,7 +13,7 @@ public class Solution {
             while (scanner.hasNextLine()) {
                 scanner.nextLine()
                         .chars()
-                        .forEach(c -> textFormatter.process((char) c));
+                        .forEach(textFormatter::process);
             }
         } finally {
         	// empty block
@@ -41,6 +41,10 @@ class TextFormatter {
         currentLineBuffer = new StringBuilder();
     }
 
+    public void process(int characterWrapper) {
+        this.process((char) characterWrapper);
+    }
+    
     public void process(char aChar) {
         if (isCharIncreasingIndent(aChar)) {
             increaseIndent(aChar);
