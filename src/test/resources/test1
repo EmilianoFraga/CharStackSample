@@ -1,0 +1,7 @@
+This line has contention characters. ( Contention starts here.
+
+Continues here, at this line.
+
+Then, for some reason, ends here. )
+
+This line is out of contention scope.

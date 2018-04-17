@@ -1,0 +1,9 @@
+Now let us try some complex contention. ( Contention starts here.
+
+Continues here, at this line. { New contention. [ Another one. ] That one was closed. Now this one }
+
+The first contention ends here. )
+
+Lots of contention: ([({([({( Although this is not LISP. )})])})])
+
+This line is out of contention scope.

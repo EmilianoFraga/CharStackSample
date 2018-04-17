@@ -1,0 +1,13 @@
+*.bak
+*.swp
+*~
+
+.metadata
+.recommenders
+
+.settings
+.project
+.classpath
+
+target/
+/netbeans/nbproject/private/
